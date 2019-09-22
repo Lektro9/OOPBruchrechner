@@ -1,0 +1,6 @@
+/home/larsk/Projects/OOPBruchrechner_Kroll/OOPBruchrechner_Kroll/bin/Debug/OOPBruchrechner_Kroll.exe
+/home/larsk/Projects/OOPBruchrechner_Kroll/OOPBruchrechner_Kroll/bin/Debug/OOPBruchrechner_Kroll.pdb
+/home/larsk/Projects/OOPBruchrechner_Kroll/OOPBruchrechner_Kroll/obj/x86/Debug/OOPBruchrechner_Kroll.csprojAssemblyReference.cache
+/home/larsk/Projects/OOPBruchrechner_Kroll/OOPBruchrechner_Kroll/obj/x86/Debug/OOPBruchrechner_Kroll.csproj.CoreCompileInputs.cache
+/home/larsk/Projects/OOPBruchrechner_Kroll/OOPBruchrechner_Kroll/obj/x86/Debug/OOPBruchrechner_Kroll.exe
+/home/larsk/Projects/OOPBruchrechner_Kroll/OOPBruchrechner_Kroll/obj/x86/Debug/OOPBruchrechner_Kroll.pdb
