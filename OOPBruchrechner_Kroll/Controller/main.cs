@@ -12,13 +12,9 @@ namespace OOPBruchrechner_Kroll
     {
         public static void Main(string[] args)
         {
-            Bruch b1 = new Bruch(4, 5);
-            Bruch b2 = new Bruch(1, 5);
-            Bruch bErgebnis = new Bruch(2, 3);
-            b1.Zaehler = 5;
-            bErgebnis.Zuweisung(b1.Subtrahieren(b2));
+            Controller Verwalter = new Controller();
 
-            Console.WriteLine(bErgebnis.Zaehler + "/" + bErgebnis.Nenner);
+            Verwalter.run();
         }
     }
 }
