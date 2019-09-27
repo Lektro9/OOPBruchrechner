@@ -8,7 +8,7 @@
 using System;
 using System.Threading;
 
-namespace OOPBruchrechner_Kroll.Views
+namespace OOPBruchrechner_Kroll
 {
     class UserInterface
     {
@@ -37,7 +37,7 @@ namespace OOPBruchrechner_Kroll.Views
         #endregion
 
         #region Worker
-        public Bruch Brucheinlesen()
+        public Bruch BruchEinlesen()
         {
             int Zaehler;
             int Nenner;
@@ -47,7 +47,7 @@ namespace OOPBruchrechner_Kroll.Views
             Console.WriteLine("Gebe den Nenner des Bruches ein");
             Nenner = Convert.ToInt32(Console.ReadLine());
 
-            Bruch BruchEingabe = new Bruch(Zaehler, Nenner);
+            Bruch = new Bruch(Zaehler, Nenner);
 
             return BruchEingabe;
         }

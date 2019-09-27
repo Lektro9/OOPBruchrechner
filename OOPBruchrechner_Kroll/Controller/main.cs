@@ -15,6 +15,7 @@ namespace OOPBruchrechner_Kroll
             Controller Verwalter = new Controller();
 
             Verwalter.run();
+
         }
     }
 }
