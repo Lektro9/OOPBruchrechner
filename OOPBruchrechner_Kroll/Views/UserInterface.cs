@@ -6,6 +6,8 @@
 //25.09.2019:   Entwicklungsbeginn 
 
 using System;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using System.Threading;
 
 namespace OOPBruchrechner_Kroll
@@ -42,19 +44,48 @@ namespace OOPBruchrechner_Kroll
             int Zaehler;
             int Nenner;
 
-            Console.WriteLine("Gebe den Zähler des Bruches ein");
-            Zaehler = Convert.ToInt32(Console.ReadLine()); //TODO: Fehleranfälligkeit verbessern
-            Console.WriteLine("Gebe den Nenner des Bruches ein");
-            Nenner = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Schreibe deinen Bruch (z.B.: -5/4):");
 
-            Bruch = new Bruch(Zaehler, Nenner);
+            Regex regEx = new Regex(@"^(-?\d+)(?# 1.Gruppe)(?:/)(-?[1-9]\d*)");
+            string input = Console.ReadLine();
+            Match match = regEx.Match(input);
+            GroupCollection data = match.Groups;
+            List<string> matches = new List<string>();
 
-            return BruchEingabe;
+            if (match.Success)
+            {
+                foreach (string groupName in regEx.GetGroupNames())
+                {
+                    matches.Add(match.Groups[groupName].Value);
+                }
+            }
+            else // Bei falscher Eingabe noch einmal eine Eingabe erfragen
+            {
+                Console.WriteLine("Falsche Eingabe! Beachte das Beispiel und teile nicht durch 0!");
+                Console.WriteLine("Weiter mit beliebiger Taste");
+                Console.ReadKey();
+                BruchEinlesen();
+            }
+
+            Bruch = new Bruch(Convert.ToInt32(matches[1]), Convert.ToInt32(matches[2]));
+
+            return Bruch;
         }
 
         public void BruchAusgeben()
         {
-            if (Bruch.Zaehler < 0)
+            Console.Clear();
+            Console.WriteLine("Das Ergebnis lautet: ");
+
+            if (Bruch.Zaehler == 0)
+            {
+                Console.WriteLine(0);
+            }
+            else if (Bruch.Zaehler == 1 && Bruch.Nenner == 1)
+            {
+                Console.WriteLine(1);
+            }
+            else if (Bruch.Zaehler < 0)
             {
                 Console.WriteLine("\t" + "  " + Convert.ToString(-Bruch.Zaehler)); //hier das Minus rausnehmen für richtige Anzeige
                 Console.WriteLine("\t" + "- " + "──");
@@ -68,6 +99,7 @@ namespace OOPBruchrechner_Kroll
                 Console.WriteLine("\t" + Convert.ToString(Bruch.Nenner));
             }
 
+            Console.ReadKey();
         }
 
         public void SplashAusgeben()
@@ -90,16 +122,18 @@ namespace OOPBruchrechner_Kroll
         public void MenueAusgeben()
         {
             Console.Clear();
-            Console.WriteLine("Bruchrechner");
+            Console.WriteLine("Bruchrechner: ");
             Console.WriteLine();
-            Console.WriteLine("1. Zwei Brüche miteinander berechnen");
-            Console.WriteLine("2. Programm verlassen");
-            
+            Console.WriteLine("1. Zwei Brüche miteinander addieren");
+            Console.WriteLine("2. Zwei Brüche miteinander subtrahieren");
+            Console.WriteLine("3. Zwei Brüche miteinander multiplizieren");
+            Console.WriteLine("4. Zwei Brüche miteinander dividieren");
+            Console.WriteLine("5. Programm verlassen");
         }
 
         public string MenueAuswahlEinlesen()
         {
-            string MenuEingabe = Console.ReadLine();
+            string MenuEingabe = Console.ReadLine(); //TODO: Fehleingaben abweisen
             return MenuEingabe;
         }
 

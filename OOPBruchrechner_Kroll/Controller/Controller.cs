@@ -28,6 +28,10 @@ namespace OOPBruchrechner_Kroll
         public Controller()
         {
             this.Brueche = new Bruch[3];
+            for (int i = 0; i < Brueche.Length; i++)
+            {
+                Brueche[i] = new Bruch();
+            }
             this.IO = new UserInterface();
         }
         #endregion
@@ -35,49 +39,94 @@ namespace OOPBruchrechner_Kroll
         #region Worker
         public void run()
         {
-            Console.WriteLine("Hier geht's los");
-            // TODO: 1.show splash 2. show menue 3. wait for input(menue selection) 4. show user example of a calculation and ask for input 5. read input, 6. put fractions into array, 7. calculate 8. give back result
             SplashAnzeigen();
-            MenueAnzeigen();
-            IO.BruchEinlesen();
-            Brueche[0].Zuweisung(IO.Bruch);
-            IO.BruchEinlesen
+
+            bool running = true;
+
+            while (running)
+            {
+                
+                string Rechenart = MenueAnzeigen();
+
+                if (Rechenart == "1" || Rechenart == "2" || Rechenart == "3" || Rechenart == "4")
+                {
+                    Console.Clear();
+                    IO.BruchEinlesen();
+                    Brueche[0].Zuweisung(IO.Bruch);
+                    IO.BruchEinlesen();
+                    Brueche[1].Zuweisung(IO.Bruch);
+                }
+                else
+                {
+
+                }
+                
+                switch (Rechenart)
+                {
+                    case "1":
+                        BruecheAddieren();
+                        ErgebnisAnzeigen();
+                        break;
+                    case "2":
+                        BruecheSubtrahieren();
+                        ErgebnisAnzeigen();
+                        break;
+                    case "3":
+                        BruecheMultiplizieren();
+                        ErgebnisAnzeigen();
+                        break;
+                    case "4":
+                        BruecheDividieren();
+                        ErgebnisAnzeigen();
+                        break;
+                    case "5":
+                        running = false;
+                        break;
+                    default:
+                        Console.Clear();
+                        Console.WriteLine("falsche Eingabe");
+                        Console.ReadKey();
+                        break;
+                }
+            }
         }
 
         public void SplashAnzeigen()
         {
-            // TODO: show Splash
+            IO.SplashAusgeben();
         }
 
         public string MenueAnzeigen()
         {
-            // TODO: show Menu
-            return "hier sollte ein Menue sein";
+            IO.MenueAusgeben();
+            string Auswahl = IO.MenueAuswahlEinlesen();
+            return Auswahl;
         }
 
-        public void BruechAddieren()
+        public void BruecheAddieren()
         {
-            // TODO: add fractions
+            Brueche[2].Zuweisung(Brueche[0].Addieren(Brueche[1]));
         }
 
-        public void BruechSubtrahieren()
+        public void BruecheSubtrahieren()
         {
-            // TODO: subtract fractions
+            Brueche[2].Zuweisung(Brueche[0].Subtrahieren(Brueche[1]));
         }
 
-        public void BruechMultiplizieren()
+        public void BruecheMultiplizieren()
         {
-            // TODO: multiply fractions
+            Brueche[2].Zuweisung(Brueche[0].Multiplizieren(Brueche[1]));
         }
 
-        public void BruechDividieren()
+        public void BruecheDividieren()
         {
-            // TODO: divide fractions
+            Brueche[2].Zuweisung(Brueche[0].Dividieren(Brueche[1]));
         }
 
         public void ErgebnisAnzeigen()
         {
-            // TODO: show result fraction
+            IO.Bruch.Zuweisung(Brueche[2]);
+            IO.BruchAusgeben();
         }
         #endregion
 

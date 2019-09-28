@@ -18,3 +18,10 @@ C:/Users/kroll_lars/Desktop/OOPBruchrechner/OOPBruchrechner/OOPBruchrechner_Krol
 /home/larsk/Schule/gitRepos/OOPBruchrechner/OOPBruchrechner/OOPBruchrechner_Kroll/bin/Debug/OOPBruchrechner_Kroll.exe.config
 /home/larsk/Schule/gitRepos/OOPBruchrechner/OOPBruchrechner/OOPBruchrechner_Kroll/bin/Debug/OOPBruchrechner_Kroll.exe
 /home/larsk/Schule/gitRepos/OOPBruchrechner/OOPBruchrechner/OOPBruchrechner_Kroll/bin/Debug/OOPBruchrechner_Kroll.pdb
+C:\Users\TheBestNew01\Desktop\OOPBruchrechner\OOPBruchrechner\OOPBruchrechner_Kroll\obj\x86\Debug\OOPBruchrechner_Kroll.exe
+C:\Users\TheBestNew01\Desktop\OOPBruchrechner\OOPBruchrechner\OOPBruchrechner_Kroll\obj\x86\Debug\OOPBruchrechner_Kroll.pdb
+C:\Users\TheBestNew01\Desktop\OOPBruchrechner\OOPBruchrechner\OOPBruchrechner_Kroll\obj\x86\Debug\OOPBruchrechner_Kroll.csprojAssemblyReference.cache
+C:\Users\TheBestNew01\Desktop\OOPBruchrechner\OOPBruchrechner\OOPBruchrechner_Kroll\obj\x86\Debug\OOPBruchrechner_Kroll.csproj.CoreCompileInputs.cache
+C:\Users\TheBestNew01\Desktop\OOPBruchrechner\OOPBruchrechner\OOPBruchrechner_Kroll\bin\Debug\OOPBruchrechner_Kroll.exe.config
+C:\Users\TheBestNew01\Desktop\OOPBruchrechner\OOPBruchrechner\OOPBruchrechner_Kroll\bin\Debug\OOPBruchrechner_Kroll.exe
+C:\Users\TheBestNew01\Desktop\OOPBruchrechner\OOPBruchrechner\OOPBruchrechner_Kroll\bin\Debug\OOPBruchrechner_Kroll.pdb
