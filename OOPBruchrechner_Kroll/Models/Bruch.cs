@@ -84,8 +84,8 @@ namespace OOPBruchrechner_Kroll
         private void Kuerzen()
         {
             //Euklidischer Alg.
-            int ggTZaehler = this.Zaehler;
-            int ggTNenner = this.Nenner;
+            int ggTZaehler = Math.Abs(this.Zaehler);
+            int ggTNenner = Math.Abs(this.Nenner);
             int ggT;
 
             if (ggTZaehler == 0)                    //ggT bestimmen

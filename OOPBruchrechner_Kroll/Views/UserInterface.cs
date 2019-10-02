@@ -58,6 +58,7 @@ namespace OOPBruchrechner_Kroll
                 {
                     matches.Add(match.Groups[groupName].Value);
                 }
+                Bruch = new Bruch(Convert.ToInt32(matches[1]), Convert.ToInt32(matches[2]));
             }
             else // Bei falscher Eingabe noch einmal eine Eingabe erfragen
             {
@@ -66,9 +67,7 @@ namespace OOPBruchrechner_Kroll
                 Console.ReadKey();
                 BruchEinlesen();
             }
-
-            Bruch = new Bruch(Convert.ToInt32(matches[1]), Convert.ToInt32(matches[2]));
-
+            
             return Bruch;
         }
 
@@ -85,11 +84,23 @@ namespace OOPBruchrechner_Kroll
             {
                 Console.WriteLine(1);
             }
+            else if (Bruch.Zaehler < 0 && Bruch.Nenner < 0)
+            {
+                Console.WriteLine("\t" + Convert.ToString(-Bruch.Zaehler)); //hier das Minus rausnehmen für richtige Anzeige
+                Console.WriteLine("\t" + "──");
+                Console.WriteLine("\t" + Convert.ToString(-Bruch.Nenner)); //hier das Minus rausnehmen für richtige Anzeige
+            }
             else if (Bruch.Zaehler < 0)
             {
                 Console.WriteLine("\t" + "  " + Convert.ToString(-Bruch.Zaehler)); //hier das Minus rausnehmen für richtige Anzeige
                 Console.WriteLine("\t" + "- " + "──");
                 Console.WriteLine("\t" + "  " + Convert.ToString(Bruch.Nenner));
+            }
+            else if (Bruch.Nenner < 0)
+            {
+                Console.WriteLine("\t" + "  " + Convert.ToString(Bruch.Zaehler)); 
+                Console.WriteLine("\t" + "- " + "──");
+                Console.WriteLine("\t" + "  " + Convert.ToString(-Bruch.Nenner)); //hier das Minus rausnehmen für richtige Anzeige
             }
             //Für den Fall, dass der Bruch positiv ist
             else

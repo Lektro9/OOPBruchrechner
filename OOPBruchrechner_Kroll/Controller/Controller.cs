@@ -34,6 +34,8 @@ namespace OOPBruchrechner_Kroll
             }
             this.IO = new UserInterface();
         }
+        // Spezialkonstruktor
+        
         #endregion
 
         #region Worker
@@ -58,26 +60,22 @@ namespace OOPBruchrechner_Kroll
                 }
                 else
                 {
-
+                    // nichts
                 }
-                
+
                 switch (Rechenart)
                 {
                     case "1":
                         BruecheAddieren();
-                        ErgebnisAnzeigen();
                         break;
                     case "2":
                         BruecheSubtrahieren();
-                        ErgebnisAnzeigen();
                         break;
                     case "3":
                         BruecheMultiplizieren();
-                        ErgebnisAnzeigen();
                         break;
                     case "4":
                         BruecheDividieren();
-                        ErgebnisAnzeigen();
                         break;
                     case "5":
                         running = false;
@@ -87,6 +85,14 @@ namespace OOPBruchrechner_Kroll
                         Console.WriteLine("falsche Eingabe");
                         Console.ReadKey();
                         break;
+                }
+                if (running)
+                {
+                    ErgebnisAnzeigen();
+                }
+                else
+                {
+                    // nichts
                 }
             }
         }
