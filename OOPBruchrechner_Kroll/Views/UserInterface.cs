@@ -19,11 +19,8 @@ namespace OOPBruchrechner_Kroll
     {
 
         #region Eigenschaften
-        Bruch _Bruch;
-        string _Text;
-
-
-
+        private Bruch _Bruch;
+        private string _Text;
         #endregion
 
         #region Accessoren/Modifier

@@ -18,8 +18,8 @@ namespace OOPBruchrechner_Kroll
     {
 
         #region Eigenschaften
-        Bruch[] _Brueche;
-        UserInterface _IO;
+        private Bruch[] _Brueche;
+        private UserInterface _IO;
         #endregion
 
         #region Accessoren/Modifier
