@@ -4,6 +4,9 @@
 //Beschreibung: Interagiert mit dem Nutzer
 //Änderungen:
 //25.09.2019:   Entwicklungsbeginn 
+//27.09.2019:   Funktionen mit TODOS hinzugefuegt
+//28.09.2019:   Methoden ausgefuellt
+//08.10.2019:   Entwicklung abgeschlossen
 
 using System;
 using System.Collections.Generic;
@@ -32,10 +35,23 @@ namespace OOPBruchrechner_Kroll
         #region Konstruktoren
         public UserInterface()
         {
-            this.Text = "Willkommen zum Bruchrechner";
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            this.Text = "\n           Programmm:    Bruchrechner Version 1.0" +
+                "\n           Autor:        Kroll" +
+                "\n           Beschreibung: Simples Rechnen mit Brüchen";
             this.Bruch = new Bruch();
         }
-        
+        //Spezialkonstruktor
+        public UserInterface(string versionsKennung)
+        {
+            this.Text = this.Text = "\n           Programmm:    Bruchrechner Version " + versionsKennung +
+                "\n           Autor:        Kroll" +
+                "\n           Beschreibung: Simples Rechnen mit Brüchen";
+            this.Bruch = new Bruch();
+        }
+
         #endregion
 
         #region Worker
@@ -116,17 +132,7 @@ namespace OOPBruchrechner_Kroll
         public void SplashAusgeben()
         {
             Console.Clear();
-
-            Console.WriteLine(@" ___                        _      ___                  _                         
-(  _`\                     ( )    |  _`\               ( )                        
-| (_) ) _ __  _   _    ___ | |__  | (_) )   __     ___ | |__    ___     __   _ __ 
-|  _ <'( '__)( ) ( ) /'___)|  _ `\| ,  /  /'__`\ /'___)|  _ `\/' _ `\ /'__`\( '__)
-| (_) )| |   | (_) |( (___ | | | || |\ \ (  ___/( (___ | | | || ( ) |(  ___/| |   
-(____/'(_)   `\___/'`\____)(_) (_)(_) (_)`\____)`\____)(_) (_)(_) (_)`\____)(_)   ");
-
-            Console.WriteLine("\n           Programmm:    BruchrechnerV1.0");
-            Console.WriteLine("           Autor:        Kroll");
-            Console.WriteLine("           Beschreibung: Simples Rechnen mit Brüchen");
+            Console.WriteLine(Text);
             Thread.Sleep(2000);
         }
 

@@ -4,6 +4,7 @@
 //Beschreibung: "Bauplan" für ein Objekt Bruch
 //Änderungen:
 //18.09.2019:   Entwicklungsbeginn  
+//08.10.2019:   Entwicklung abgeschlossen
 
 using System;
 using System.Collections.Generic;
@@ -34,7 +35,7 @@ namespace OOPBruchrechner_Kroll
             this.Zaehler = 1;
             this.Nenner = 1;
         }
-
+        //Spezialkonstruktor
         public Bruch(int val1, int val2)
         {
             this.Zaehler = val1;
@@ -122,7 +123,7 @@ namespace OOPBruchrechner_Kroll
         }
             #endregion
 
-            #region Schnittstellen
+        #region Schnittstellen
             #endregion
         }
 }

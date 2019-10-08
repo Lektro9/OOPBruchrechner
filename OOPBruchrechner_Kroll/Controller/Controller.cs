@@ -4,6 +4,10 @@
 //Beschreibung: Verwaltet die Daten
 //Änderungen:
 //25.09.2019:   Entwicklungsbeginn 
+//27.09.2019:   Funktionen mit TODOS hinzugefuegt
+//28.09.2019:   Methoden ausgefuellt
+//02.10.2019:   Fehler ausgebessert und Lesbarkeit gefoerdert
+//08.10.2019:   Entwicklung abgeschlossen
 
 using OOPBruchrechner_Kroll;
 using System;
@@ -12,7 +16,6 @@ namespace OOPBruchrechner_Kroll
 {
     class Controller
     {
-
 
         #region Eigenschaften
         Bruch[] _Brueche;
@@ -35,7 +38,15 @@ namespace OOPBruchrechner_Kroll
             this.IO = new UserInterface();
         }
         // Spezialkonstruktor
-        
+        public Controller(string versionsNummer)
+        {
+            this.Brueche = new Bruch[3];
+            for (int i = 0; i < Brueche.Length; i++)
+            {
+                Brueche[i] = new Bruch();
+            }
+            this.IO = new UserInterface(versionsNummer);
+        }
         #endregion
 
         #region Worker

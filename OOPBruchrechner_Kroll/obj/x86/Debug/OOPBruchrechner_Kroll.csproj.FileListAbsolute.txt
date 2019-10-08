@@ -25,3 +25,9 @@ C:\Users\kroll_lars\Desktop\OOPBruchrechner\OOPBruchrechner\OOPBruchrechner_Krol
 C:\Users\kroll_lars\Desktop\OOPBruchrechner\OOPBruchrechner\OOPBruchrechner_Kroll\obj\x86\Debug\OOPBruchrechner_Kroll.exe
 C:\Users\kroll_lars\Desktop\OOPBruchrechner\OOPBruchrechner\OOPBruchrechner_Kroll\obj\x86\Debug\OOPBruchrechner_Kroll.pdb
 C:\Users\kroll_lars\Desktop\OOPBruchrechner\OOPBruchrechner\OOPBruchrechner_Kroll\obj\x86\Debug\OOPBruchrechner_Kroll.csprojAssemblyReference.cache
+C:\Users\IEUser\Source\Repos\OOPBruchrechner\OOPBruchrechner_Kroll\bin\Debug\OOPBruchrechner_Kroll.exe.config
+C:\Users\IEUser\Source\Repos\OOPBruchrechner\OOPBruchrechner_Kroll\bin\Debug\OOPBruchrechner_Kroll.exe
+C:\Users\IEUser\Source\Repos\OOPBruchrechner\OOPBruchrechner_Kroll\bin\Debug\OOPBruchrechner_Kroll.pdb
+C:\Users\IEUser\Source\Repos\OOPBruchrechner\OOPBruchrechner_Kroll\obj\x86\Debug\OOPBruchrechner_Kroll.csprojAssemblyReference.cache
+C:\Users\IEUser\Source\Repos\OOPBruchrechner\OOPBruchrechner_Kroll\obj\x86\Debug\OOPBruchrechner_Kroll.exe
+C:\Users\IEUser\Source\Repos\OOPBruchrechner\OOPBruchrechner_Kroll\obj\x86\Debug\OOPBruchrechner_Kroll.pdb
