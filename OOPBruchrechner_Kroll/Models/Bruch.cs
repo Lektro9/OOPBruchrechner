@@ -25,7 +25,6 @@ namespace OOPBruchrechner_Kroll
         #region Accessoren/Modifier
         public int Zaehler { get => _Zaehler; set => _Zaehler = value; }
         public int Nenner { get => _Nenner; set => _Nenner = value; }
-        public char Vorzeichen { get => _Vorzeichen; set => _Vorzeichen = value; }
         #endregion
 
         #region Konstruktoren
