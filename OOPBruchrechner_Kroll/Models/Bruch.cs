@@ -19,7 +19,6 @@ namespace OOPBruchrechner_Kroll
         #region Eigenschaften
         private int _Zaehler;
         private int _Nenner;
-        private char _Vorzeichen;
 
         #endregion
 
