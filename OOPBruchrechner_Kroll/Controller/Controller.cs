@@ -93,9 +93,9 @@ namespace OOPBruchrechner_Kroll
                         break;
                     default:
                         Console.Clear();
-                        Console.WriteLine("falsche Eingabe");
+                        Console.WriteLine("Falsche Eingabe");
                         Console.ReadKey();
-                        break;
+                        continue;
                 }
                 if (running)
                 {

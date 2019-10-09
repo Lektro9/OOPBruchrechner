@@ -46,6 +46,7 @@ namespace OOPBruchrechner_Kroll
             this.Text = this.Text = "\n           Programmm:    Bruchrechner Version " + versionsKennung +
                 "\n           Autor:        Kroll" +
                 "\n           Beschreibung: Simples Rechnen mit Brüchen";
+            
             this.Bruch = new Bruch();
         }
 
@@ -88,7 +89,8 @@ namespace OOPBruchrechner_Kroll
         {
             Console.Clear();
             Console.WriteLine("Das Ergebnis lautet: ");
-
+            
+            //TODO: evtl. eine eigene Methode zum Prüfen der "Edge-Cases"
             if (Bruch.Zaehler == 0)
             {
                 Console.WriteLine(0);
@@ -114,6 +116,10 @@ namespace OOPBruchrechner_Kroll
                 Console.WriteLine("\t" + "  " + Convert.ToString(Bruch.Zaehler)); 
                 Console.WriteLine("\t" + "- " + "──");
                 Console.WriteLine("\t" + "  " + Convert.ToString(-Bruch.Nenner)); //hier das Minus rausnehmen für richtige Anzeige
+            }
+            else if (Bruch.Nenner == 1)
+            {
+                Console.WriteLine(Bruch.Zaehler);
             }
             //Für den Fall, dass der Bruch positiv ist
             else
